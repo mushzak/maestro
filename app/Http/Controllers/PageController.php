@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Gallery;
+use App\Setting;
 use Illuminate\Http\Request;
 
 class PageController extends Controller {
@@ -14,13 +15,16 @@ class PageController extends Controller {
 	 */
 	public function index()
 	{
-		return view('pages.home');
+		$setting = Setting::find('1');
+		return view('pages.home')->with('setting',$setting);
 	}
 	public function about(){
-		return view('pages.about');
+		$setting = Setting::find('1');
+		return view('pages.about')->with('setting',$setting);
 	}
 	public function contact(){
-		return view('pages.contact');
+		$setting = Setting::find('1');
+		return view('pages.contact')->with('setting',$setting);
 	}
 	public function gallery(Gallery $gallery){
 		$gallery = Gallery::orderBy('id','desc')->get();

@@ -181,10 +181,10 @@
                     <h4>Company <strong>Address</strong></h4>
                     <ul>
                         <li> <strong>Maestro</strong><br />
-                            325 N Verdugo Rd,Glendale ,CA 91206 <br />
-                            Telephone: +17476665552 <br />
-                            E-mail: <a href="mailto:mail@companyname.com">mail@companyname.com</a><br />
-                            Website: <a href="index.html">www.yoursitename.com</a> </li>
+                            {{$setting->address}}<br />
+                            Telephone: {{$setting->tel}} <br />
+                            E-mail: <a href="{{$setting->mail}}">{{$setting->mail}}</a><br />
+                            Website: <a href="index.html">{{$setting->site}}</a> </li>
                     </ul>
                 </div>
 

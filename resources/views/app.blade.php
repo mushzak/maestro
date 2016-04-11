@@ -35,14 +35,14 @@
 				<ul class="nav navbar-nav">
                                         <li><a href="{{ url('/admin') }}">Home Page</a></li>
 					<li><a href="{{ url('/admin') }}">Gallery</a></li>
-					<li><a href="{{ url('/admin') }}">Contact</a></li>
+					<li><a href="{{ url('/admin/settings') }}">Contact</a></li>
                                         
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
+						{{--<li><a href="{{ url('/auth/register') }}">Register</a></li>--}}
 					@else
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>

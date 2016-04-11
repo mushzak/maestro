@@ -162,7 +162,7 @@
                    data-delay="700"
                    data-ease="easeOutExpo"
                    data-duration="1800"
-                   data-effect="scale(1.5,1.6)">Get Started Now</a>
+                   data-effect="scale(1.5,1.6)"></a>
             </div>
             <!-- end slide 3 -->
         </div>
@@ -178,9 +178,7 @@
 
             <div class="arrow_box">
                 <h1>Get fine DINING experience unlike any other</h1>
-                <p class="bigtfont dark less7">Enjoy an authentic breakfast or enjoy delicious prepared lunch. Our
-                    selection can be also prepared to take away. your favorite foods like including deep dish pizzas,
-                    salads, sandwiches, pastas, steaks, and so much. please check our delicious menu below.</p>
+                <p class="bigtfont dark less7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
             </div>
         </div>
     </div>
@@ -192,9 +190,7 @@
         <div class="left">
             <div class="cont">
                 <h1 class="light">fresh <b>Drinks</b></h1>
-                <p class="bigtfont less3">College in Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-                    literature, discov ered the undoubtable source.</p>
+                <p class="bigtfont less3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
                 <div class="clearfix"></div>
                 <div class="margin_top4"></div>
             </div>
@@ -220,8 +216,7 @@
                 <div class="clearfix margin_top1"></div>
                 <h4 class="caps medium ">i love pasta</h4>
                 <div class="clearfix margin_top2"></div>
-                <p> Lorem Ipsum as their default model text, and search for 'lorem ipsum' will uncover many web sites
-                    still in their infancy versions have evolved over the years, sometimes by on purpose.</p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
             </div>
 
             <div class="one_third">
@@ -229,8 +224,7 @@
                 <div class="clearfix margin_top1"></div>
                 <h4 class="caps medium ">Awesome pizza</h4>
                 <div class="clearfix margin_top2"></div>
-                <p> Lorem Ipsum as their default model text, and search for 'lorem ipsum' will uncover many web sites
-                    still in their infancy versions have evolved over the years, sometimes by on purpose.</p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
             </div>
 
             <div class="one_third last">
@@ -292,11 +286,11 @@
 
             <div class="left">
                 <ul>
-                    <li><h5 class="white">Company Name</h5>
-                        325 N Verdugo Rd,Glendale ,CA 91206 <br/>
-                        Telephone: +17476665552<br/>
-                        E-mail: <a href="mailto:mail@companyname.com">mail@companyname.com</a><br/>
-                        Website: <a href="index.html">www.yoursitename.com</a></li>
+                    <li><h5 class="white">Maestro</h5>
+                       {{$setting->address}} <br/>
+                        Telephone: {{$setting->tel}}<br/>
+                        E-mail: <a href="mailto:{{$setting->mail}}">{{$setting->mail}}</a><br/>
+                        Website: <a href="index.html">{{$setting->site}}</a></li>
                 </ul>
             </div>
             <!-- end section -->

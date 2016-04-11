@@ -191,11 +191,10 @@
                 <h4>Address Info</h4>
 
                 <ul class="faddress">
-                    <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; 325 N Verdugo Rd,Glendale ,CA 91206
+                    <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; {{$setting->address}}
                     </li>
-                    <li><i class="fa fa-phone"></i>&nbsp; +17476665552</li>
-                    <li><a href="mailto:info@yourdomain.com"><i class="fa fa-envelope"></i>&nbsp;
-                            info@yourdomain.com</a></li>
+                    <li><i class="fa fa-phone"></i>&nbsp; {{$setting->tel}}</li>
+                    <li><a href="mailto:{{$setting->mail}}"><i class="fa fa-envelope"></i>&nbsp;{{$setting->mail}}</a></li>
                 </ul>
 
             </div><!-- end about -->

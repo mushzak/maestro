@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use File;
 use App\Gallery;
+use App\Setting;
 use Intervention\Image\ImageManagerStatic as Image;
 class AdminController extends Controller {
 
@@ -126,6 +127,16 @@ class AdminController extends Controller {
 		}
 		$gallery = Gallery::where(array('id'=>$id))->update($data);
 		return redirect('/admin');
+	}
+	public function settings(){
+		$setting = Setting::find('1');
+		return view('admin.settings')->with('setting',$setting);
+	}
+	public function updateSettings(Request $request){
+		$data = $request->all();
+		unset($data['_token']);
+		$setting = Setting::where(array('id'=>'1'))->update($data);
+	 	return	redirect('admin/settings');
 	}
 
 }
