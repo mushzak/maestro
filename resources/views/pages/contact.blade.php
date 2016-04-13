@@ -180,7 +180,7 @@
 
                     <h4>Company <strong>Address</strong></h4>
                     <ul>
-                        <li> <strong>Maestro</strong><br />
+                        <li> <strong>Maestro Banquet Hall & Restaurant</strong><br />
                             {{$setting->address}}<br />
                             Telephone: {{$setting->tel}} <br />
                             E-mail: <a href="{{$setting->mail}}">{{$setting->mail}}</a><br />
@@ -205,72 +205,6 @@
 
 
     <footer class="footer">
-
-        <div class="container">
-
-            <div class="one_fourth">
-                <div class="qlinks">
-
-                    <h4>Useful Links</h4>
-
-                    <ul>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Home Page Variations</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Awsome Slidershows</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Features and Typography</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Different &amp; Unique Pages</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Single and Portfolios</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Recent Blogs or News</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Layered PSD Files</a></li>
-                    </ul>
-
-                </div>
-            </div><!-- end links -->
-
-            <div class="one_fourth">
-
-                <h4>Blog Posts</h4>
-                <div class="fbposts">
-
-                    <a href="#"><img src="images/site-img37.jpg" alt="" /> Web page editors uses default model texts.</a>
-
-                    <a href="#"><img src="images/site-img38.jpg" alt="" /> Web page editors uses default model texts.</a>
-
-                    <a href="#"><img src="images/site-img39.jpg" alt="" /> Web page editors uses default model texts.</a>
-
-                </div><!-- end footer blogs -->
-
-            </div><!-- end address -->
-
-
-            <div class="one_fourth">
-
-                <h4>Latest Tweets</h4>
-
-                <ul class="twitter_feeds">
-
-                    <li class="bhline"><i class="fa fa-twitter fa-lg"></i> <a href="https://twitter.com/gsrthemes9" target="_blank">gsrthemes9</a>: Hoxa - Responsive html5 Professional Theme
-                        <em>.9 days ago &nbsp;.<a href="#">reply</a> &nbsp;.<a href="#">retweet</a> &nbsp;.<a href="#">favorite</a></em></li>
-
-                    <li><i class="fa fa-twitter fa-lg"></i> <a href="https://twitter.com/gsrthemes9" target="_blank">gsrthemes9</a>: elos - Responsive HTML5 / CSS3, Simple, Clean and Professional Multipurpose Use.
-                        <em>.12 days ago &nbsp;.<a href="#">reply</a> &nbsp;.<a href="#">retweet</a> &nbsp;.<a href="#">favorite</a></em></li>
-
-                </ul>
-
-            </div><!-- end site info -->
-
-            <div class="one_fourth last">
-
-                <h4>Address Info</h4>
-
-                <ul class="faddress">
-                    <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; 2901 Marmora Road, Glassgow,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seattle, WA 98122-1090</li>
-                    <li><i class="fa fa-phone"></i>&nbsp; +17476665552</li>
-                    <li><a href="mailto:info@yourdomain.com"><i class="fa fa-envelope"></i>&nbsp; info@yourdomain.com</a></li>
-                </ul>
-
-            </div><!-- end about -->
-
-        </div><!-- end footer -->
 
         <div class="clearfix"></div>
 

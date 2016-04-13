@@ -184,58 +184,12 @@
     </div>
     <!-- end feature_section 1 -->
     <div class="clearfix"></div>
-    <!-- end feature_section3 -->
-    <div class="clearfix"></div>
-    <div class="feature_section4">
-        <div class="left">
-            <div class="cont">
-                <h1 class="light">fresh <b>Drinks</b></h1>
-                <p class="bigtfont less3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
-                <div class="clearfix"></div>
-                <div class="margin_top4"></div>
-            </div>
-        </div><!-- end left section -->
-
-        <div class="right"></div><!-- end right section -->
-
-    </div>
-    <!-- end feature section 4 -->
-
-
-    <div class="clearfix"></div>
-
 
     <div class="feature_section5">
         <div class="container">
-
             <div class="stcode_title11">
-                <h2 class="caps"> Features <span class="line"></span></h2>
+                <h2 class="caps"> Gallery <span class="line"></span></h2>
             </div>
-            <div class="one_third">
-                <img src="images/site-img109.jpg" alt=""/>
-                <div class="clearfix margin_top1"></div>
-                <h4 class="caps medium ">i love pasta</h4>
-                <div class="clearfix margin_top2"></div>
-                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
-            </div>
-
-            <div class="one_third">
-                <img src="images/site-img110.jpg" alt=""/>
-                <div class="clearfix margin_top1"></div>
-                <h4 class="caps medium ">Awesome pizza</h4>
-                <div class="clearfix margin_top2"></div>
-                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
-            </div>
-
-            <div class="one_third last">
-                <img src="images/site-img111.jpg" alt=""/>
-                <div class="clearfix margin_top1"></div>
-                <h4 class="caps medium ">non-veg Lovers</h4>
-                <div class="clearfix margin_top2"></div>
-                <p> Lorem Ipsum as their default model text, and search for 'lorem ipsum' will uncover many web sites
-                    still in their infancy versions have evolved over the years, sometimes by on purpose.</p>
-            </div>
-
         </div>
     </div>
     <!-- end feature section 5 -->
@@ -286,7 +240,7 @@
 
             <div class="left">
                 <ul>
-                    <li><h5 class="white">Maestro</h5>
+                    <li><h5 class="white">Maestro Banquet Hall & Restaurant</h5>
                        {{$setting->address}} <br/>
                         Telephone: {{$setting->tel}}<br/>
                         E-mail: <a href="mailto:{{$setting->mail}}">{{$setting->mail}}</a><br/>

@@ -138,5 +138,4 @@ class AdminController extends Controller {
 		$setting = Setting::where(array('id'=>'1'))->update($data);
 	 	return	redirect('admin/settings');
 	}
-
 }
