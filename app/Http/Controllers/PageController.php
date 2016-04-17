@@ -15,8 +15,9 @@ class PageController extends Controller {
 	 */
 	public function index()
 	{
+		$gallery = Gallery::orderBy('id','desc')->get();
 		$setting = Setting::find('1');
-		return view('pages.home')->with('setting',$setting);
+		return view('pages.home',compact('setting','gallery'));
 	}
 	public function about(){
 		$setting = Setting::find('1');

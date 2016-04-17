@@ -19,21 +19,22 @@
     <!-- this styles only adds some repairs on idevices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google fonts - witch you want to use - (rest you can just remove) -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!-- ######### CSS STYLES ######### -->
     <link rel="stylesheet" href="css/reset-restaurant.css" type="text/css"/>
     <link rel="stylesheet" href="css/style-restaurant.css" type="text/css"/>
-
+    <link rel="stylesheet" href="js/cubeportfolio/cubeportfolio.min.css">
     <!-- font awesome icons -->
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
     <!-- simple line icons -->
     <link rel="stylesheet" type="text/css" href="css/simpleline-icons/simple-line-icons.css" media="screen"/>
-
     <!-- animations -->
     <link href="js/animations/css/animations.min.css" rel="stylesheet" type="text/css" media="all"/>
 
@@ -58,9 +59,7 @@
     <!-- cubeportfolio -->
     <link href="js/cubeportfolio/cubeportfolio.min.css" rel="stylesheet" type="text/css">
     <!-- carouselowl -->
-    <link href="js/carouselowl/owl.transitions.css" rel="stylesheet">
-    <link href="js/carouselowl/owl.carousel.css" rel="stylesheet">
-    <link href="js/carouselowl/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
     <!-- tabs -->
     <link href='js/tabs3/tabulous.css' rel='stylesheet' type='text/css'>
 </head>
@@ -93,11 +92,14 @@
 
                                 <li class="dropdown yamm-fw"><a href="{{ asset('/') }}" class="dropdown-toggle active">Home</a>
                                 </li>
-                                <li class="dropdown"><a href="{{ asset('/about') }}" class="dropdown-toggle">About Us</a>
+                                <li class="dropdown"><a href="{{ asset('/about') }}" class="dropdown-toggle">About
+                                        Us</a>
                                 </li>
-                                <li class="dropdown"><a href="{{ asset('/gallery') }}" class="dropdown-toggle">GALLERY</a>
+                                <li class="dropdown"><a href="{{ asset('/gallery') }}"
+                                                        class="dropdown-toggle">GALLERY</a>
                                 </li>
-                                <li class="dropdown"><a href="{{ asset('/contact') }}" class="dropdown-toggle">Contact</a>
+                                <li class="dropdown"><a href="{{ asset('/contact') }}"
+                                                        class="dropdown-toggle">Contact</a>
                                 </li>
                             </ul>
                         </nav>
@@ -178,7 +180,9 @@
 
             <div class="arrow_box">
                 <h1>Get fine DINING experience unlike any other</h1>
-                <p class="bigtfont dark less7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
+                <p class="bigtfont dark less7">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley of type and scrambled it to make a type specimen book.ow.</p>
             </div>
         </div>
     </div>
@@ -190,10 +194,41 @@
             <div class="stcode_title11">
                 <h2 class="caps"> Gallery <span class="line"></span></h2>
             </div>
+            <div class="owl-carousel">
+                @if(!empty($gallery))
+                    @foreach($gallery as $gallery)
+                        <div class="cbp-item item">
+                            <a href="images/gallery/{{$gallery->img_name}}" class="cbp-caption cbp-lightbox" data-title="publishing<br>by gsrthemes9">
+                                <div class="cbp-caption-defaultWrap">
+                                    <img src="images/gallery/tmb/{{$gallery->img_name}}" alt=""/>
+                                </div>
+                                <div class="cbp-caption-activeWrap">
+                                    <div class="cbp-l-caption-alignLeft">
+                                        <div class="cbp-l-caption-body">
+                                            {{--<div class="cbp-l-caption-title">{{$gallery->title}}</div>--}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+            </div>
         </div>
     </div>
-    <!-- end feature section 5 -->
-    <div class="clearfix"></div>
+    <div class="cbp-popup-wrap cbp-popup-lightbox cbp-popup-ready" data-action="close" style="display: none;">
+        <div class="cbp-popup-content">
+            <div class="cbp-popup-lightbox-figure">
+                <img src="" class="cbp-popup-lightbox-img" data-action="next" style="max-height: 563px;">
+            </div>
+        </div>
+        <div class="cbp-popup-loadingBox"></div>
+        <div class="cbp-popup-navigation-wrap">
+            <div class="cbp-popup-navigation">
+                <div class="cbp-popup-close" title="Close (Esc arrow key)" data-action="close"></div>
+            </div>
+        </div>
+    </div>
     <div class="feature_section9">
         <div class="container">
             <div class="stcode_title11 .line">
@@ -217,11 +252,14 @@
                     </div>
                     <div class="one_third last">
                         <label>
-                            <input type="text" name="name" id="phone" value="Phone" onFocus="if(this.value == 'Phone') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Phone';}" class="input">
+                            <input type="text" name="name" id="phone" value="Phone"
+                                   onFocus="if(this.value == 'Phone') {this.value = '';}"
+                                   onBlur="if (this.value == '') {this.value = 'Phone';}" class="input">
                         </label>
                     </div>
                     <label class="textarea">
-                        <textarea name="message" onFocus="if(this.value == 'Message') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Message';}" class="message"></textarea>
+                        <textarea name="message" onFocus="if(this.value == 'Message') {this.value = '';}"
+                                  onBlur="if (this.value == '') {this.value = 'Message';}" class="message"></textarea>
                     </label>
                 </form>
                 <div class="clearfix margin_top2"></div>
@@ -241,7 +279,7 @@
             <div class="left">
                 <ul>
                     <li><h5 class="white">Maestro Banquet Hall & Restaurant</h5>
-                       {{$setting->address}} <br/>
+                        {{$setting->address}} <br/>
                         Telephone: {{$setting->tel}}<br/>
                         E-mail: <a href="mailto:{{$setting->mail}}">{{$setting->mail}}</a><br/>
                         Website: <a href="index.html">{{$setting->site}}</a></li>
@@ -251,7 +289,8 @@
 
             <div class="right">
                 <div class="one_full">
-                    <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.82959074955!2d-118.23846878535889!3d34.15070161998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c109eb92282d%3A0xe6f51fb7222915f7!2zMzI1IE4gVmVyZHVnbyBSZCwgR2xlbmRhbGUsIENBIDkxMjA2LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1460201996119"></iframe>
+                    <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.82959074955!2d-118.23846878535889!3d34.15070161998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c109eb92282d%3A0xe6f51fb7222915f7!2zMzI1IE4gVmVyZHVnbyBSZCwgR2xlbmRhbGUsIENBIDkxMjA2LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1460201996119"></iframe>
                     <br/>
                 </div>
             </div>
@@ -263,7 +302,7 @@
     <div class="clearfix"></div>
     <div class="copyright_info">
         <div class="container">
-            <div class="one_half">Copyright © 2016  All rights reserved.</div>
+            <div class="one_half">Copyright © 2016 All rights reserved.</div>
             <div class="one_half last">
                 <ul class="footer_social_links">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -296,7 +335,8 @@
 <script src="js/mainmenu/customeUI.js"></script>
 <script type="text/javascript" src="js/mainmenu/sticky.js"></script>
 <script type="text/javascript" src="js/mainmenu/modernizr.custom.75180.js"></script>
-
+<script type="text/javascript" src="js/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script type="text/javascript" src="js/cubeportfolio/main.js"></script>
 <script src="js/masterslider/jquery.easing.min.js"></script>
 <script src="js/masterslider/masterslider.min.js"></script>
 <script type="text/javascript">
@@ -342,12 +382,20 @@
         responsiveSwitch: 'tablist',
         saveState: sessionStorage,
     });
+    $('.item').click(function (e) {
+        e.preventDefault();
+        var src =   $(this).children('a').attr('href');
+        $('.cbp-popup-lightbox-img').attr('src',src);
+        $('.cbp-popup-wrap').fadeIn();
+    });
+    $('.cbp-popup-close').click(function () {
+        $('.cbp-popup-wrap').fadeOut();
+    });
 </script>
 
 <script src="js/scrolltotop/totop.js" type="text/javascript"></script>
-
 <!-- carousel -->
-<script src="js/carouselowl/owl.carousel.js"></script>
+<script src="js/carouselowl/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/universal/custom.js"></script>
 </body>
 </html>
