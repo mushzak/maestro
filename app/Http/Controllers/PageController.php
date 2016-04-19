@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Gallery;
 use App\Setting;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 class PageController extends Controller {
 
 	/**
@@ -30,6 +30,26 @@ class PageController extends Controller {
 	public function gallery(Gallery $gallery){
 		$gallery = Gallery::orderBy('id','desc')->get();
 		return view('pages.gallery',compact('gallery'));
+	}
+	public function sendEmail(Request $request){
+		$data = $request->all();
+		$rules = [
+			'name' =>'required',
+			'subject'=>'required',
+			'email' =>'required|email',
+			'message'=>'required'
+		];
+		$validator = Validator::make($data,$rules);
+		if($validator->fails()){
+			$messages = $validator->messages();
+			return redirect()->back()->with(array('errors'=>$messages))->withInput();
+		}
+		$to      = 'maestroglendale@gmail.com';
+		$subject = $data['subject'];
+		$message = $data['message'];
+		$headers = 'From:'.$data['email'] . "\r\n";
+		mail($to, $subject, $message, $headers);
+		return redirect('/');
 	}
 
 	/**

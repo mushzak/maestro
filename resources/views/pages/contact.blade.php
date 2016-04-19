@@ -113,44 +113,37 @@
 
         </div>
     </div><!-- end page title -->
-
     <div class="clearfix"></div>
-
-
     <div class="content_fullwidth less2">
         <div class="container">
-
             <div class="one_half">
-
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <br />
                 <div class="cforms_sty3">
-
-
+                    @if(count($errors)>0)
+                        <div class="alert alert-danger">
+                            <strong> Whoops!!</strong>
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>
+                                        {{$error}}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div id="form_status"></div>
-                    <form type="POST" id="gsr-contact" onSubmit="return valid_datas( this );">
+                        <form action="{{asset('/sendEmail')}}" method="POST" id="thisid">
                         <label class="label">Name <em>*</em></label>
                         <label class="input">
                             <input type="text" name="name" id="name">
                         </label>
-
                         <div class="clearfix"></div>
-
                         <label class="label">E-mail <em>*</em></label>
                         <label class="input">
                             <input type="email" name="email" id="email">
                         </label>
-
-                        <!-- <div class="clearfix"></div>
-
-
-                        <label class="label">Phone <em>*</em></label>
-                        <label class="input">
-                            <input type="text" name="phone" id="phone">
-                        </label> -->
-
                         <div class="clearfix"></div>
-
                         <label class="label">Subject <em>*</em></label>
                         <label class="input">
                             <input type="text" name="subject" id="subject">
@@ -162,9 +155,8 @@
                         <label class="textarea">
                             <textarea rows="5" name="message" id="message"></textarea>
                         </label>
-
                         <div class="clearfix"></div>
-                        <input type="hidden" name="token" value="FsWga4&@f6aw" />
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <button type="submit" class="button">Send Message</button>
 
                     </form>

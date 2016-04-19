@@ -20,6 +20,7 @@ Route::post('auth/login', [ 'uses' => 'Auth\AuthController@postLogin' ]);
 Route::get('auth/logout', [ 'uses' => 'Auth\AuthController@getLogout' ]);
 Route::get('/auth/register', [ 'uses' => 'Auth\AuthController@getLogout' ]);
 Route::get('/admin/settings', 'AdminController@settings');
+Route::post('/sendEmail', 'PageController@sendEmail');
 Route::delete('/admin/{id}',array('uses' => 'AdminController@destroyGallery', 'as' => 'admin.destroyGallery'));
 Route::get('/admin/{id}',array('uses' => 'AdminController@editGallery', 'as' => 'admin.editGallery'));
 Route::post('/admin/updateGallery',array('uses' => 'AdminController@updateGallery', 'as' => 'admin.updateGallery'));

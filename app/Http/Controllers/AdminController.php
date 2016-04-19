@@ -55,7 +55,6 @@ class AdminController extends Controller {
 			$messages = $validator->messages();
 			return redirect()->back()->with(array('errors'=>$messages))->withInput();
 		}
-
 		if(is_object($request->file('img_name'))){
 			$file = $request->file('img_name');
 			$filename = md5(time() . $file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
@@ -93,7 +92,6 @@ class AdminController extends Controller {
 		$onegallery = Gallery::find($id);
 		$gallerys = Gallery::orderBy('id','desc')->get();
 		return view('admin.editGallery',compact('onegallery','gallerys'));
-		dd($gallery);
 	}
 	public function updateGallery(Request $request)
 	{

@@ -231,40 +231,47 @@
         <div class="container">
             <div class="stcode_title11 .line">
                 <h2 class="caps"> CONTACT <span class="line"></span></h2>
+                @if(count($errors)>0)
+                    <div class="alert alert-danger">
+                        <strong> Whoops!!</strong>
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>
+                                    {{$error}}
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
             <div class="bookatable-form">
-                <form action="" method="post" id="thisid">
+                <form action="{{asset('/sendEmail')}}" method="POST" id="thisid">
                     <div class="one_third">
                         <label>
-                            <input type="text" name="samplees" id="name" value="Name"
-                                   onFocus="if(this.value == 'Name') {this.value = '';}"
-                                   onBlur="if (this.value == '') {this.value = 'Name';}" class="input">
+                            <input type="text" name="name" id="name" placeholder="Name" class="input">
                         </label>
                     </div>
                     <div class="one_third">
                         <label>
-                            <input type="text" name="name" id="email" value="Email"
-                                   onFocus="if(this.value == 'Email') {this.value = '';}"
-                                   onBlur="if (this.value == '') {this.value = 'Email';}" class="input">
+                            <input type="email" name="email" id="email" placeholder="Email" class="input">
                         </label>
                     </div>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="one_third last">
                         <label>
-                            <input type="text" name="name" id="phone" value="Phone"
-                                   onFocus="if(this.value == 'Phone') {this.value = '';}"
-                                   onBlur="if (this.value == '') {this.value = 'Phone';}" class="input">
+                            <input type="text" name="subject" id="Subject" placeholder="Subject" class="input">
                         </label>
                     </div>
                     <label class="textarea">
-                        <textarea name="message" onFocus="if(this.value == 'Message') {this.value = '';}"
-                                  onBlur="if (this.value == '') {this.value = 'Message';}" class="message"></textarea>
+                        <textarea name="message" placeholder="Message" class="message"></textarea>
                     </label>
+                    <div class="clearfix"></div>
+                    <div class="clearfix margin_top3"></div>
+                    <button type="submit" class="button four send_message">Send message</button>
                 </form>
                 <div class="clearfix margin_top2"></div>
             </div>
-            <div class="clearfix"></div>
-            <div class="clearfix margin_top3"></div>
-            <a href="#" class="button four">Send message</a>
+
         </div>
     </div>
     <!-- end feature section 9 -->

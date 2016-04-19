@@ -30,7 +30,7 @@
 					<div class="panel-body col-md-6">
 						@if(count($errors)>0)
 							<div class="alert alert-danger">
-								<strong Whoops!!</strong>
+								<strong> Whoops!!</strong>
 								<ul>
 									@foreach($errors->all() as $error)
 										<li>

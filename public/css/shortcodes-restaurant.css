@@ -3979,3 +3979,6 @@ ul.list9 {
 	font-size: 25px;
 }
 }
+.container .send_message{
+	border: none;
+}
