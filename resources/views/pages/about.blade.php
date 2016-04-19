@@ -122,12 +122,7 @@
 
     <div class="page_title">
         <div class="container">
-
             <div class="title"><h1>About Us</h1></div>
-
-            <h3>Storytelling fused with technology and design of Highstand.</h3>
-            <h5>Anchour enhances business with its proven web media services.</h5>
-
         </div>
     </div><!-- end page title -->
 
@@ -136,24 +131,9 @@
     <div class="feature_section50">
         <div class="container">
 
-            <div class="one_third ">
-                <h5 class="caps">Company</h5>
-                <p>Latin words, combined with a handful of model sentence structures to generate lorem ipsum which looks
-                    reasonable recently with desktop publish software like into including versions passages.</p>
-            </div>
-            <!-- end section -->
-
-            <div class="one_third ">
-                <h5 class="caps">Our Vision</h5>
-                <p>Latin words, combined with a handful of model sentence structures to generate lorem ipsum which looks
-                    reasonable recently with desktop publish software like into including versions passages.</p>
-            </div>
-            <!-- end section -->
-
-            <div class="one_third last ">
-                <h5 class="caps">Our Mission</h5>
-                <p>Latin words, combined with a handful of model sentence structures to generate lorem ipsum which looks
-                    reasonable recently with desktop publish software like into including versions passages.</p>
+            <div class="one_third col-md-12">
+                <h5 class="caps">About Us</h5>
+                <p>{{$setting->about_text}}</p>
             </div>
             <!-- end section -->
         </div>

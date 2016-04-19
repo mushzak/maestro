@@ -37,10 +37,23 @@
                             <div class="form-group">
                                 <label for="title">Site:</label>
                                 <input type="text" class="form-control" id="site" name="site" value="{{$setting->site}}">
+                            </div>  
+                            <div class="form-group">
+                                <label for="title">Home title:</label>
+                                <input type="text" class="form-control" id="home_title" name="home_title" value="{{$setting->home_title}}">
+                            </div>
+                              <div class="form-group">
+                                <label for="title">Home description:</label>
+                                <input type="text" class="form-control" id="home_title" name="home_description" value="{{$setting->home_description}}">
+                            </div>
+                             <div class="form-group">
+                                <label for="title">About text:</label>
+                                <input type="text" class="form-control" id="home_title" name="about_text" value="{{$setting->about_text}}">
                             </div>
                             <div class="form-group">
                                 <input type="hidden" class="btn btn-default btn-file" id="id" name="id" value="{{$setting->id}}">
                             </div>
+                            
 
                             <button type="submit" class="btn btn-default">Update</button>
                         </form>
