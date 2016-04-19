@@ -129,7 +129,7 @@
                 @foreach($gallery as $gallery)
                     <div class="cbp-item">
                         <a href="images/gallery/{{$gallery->img_name}}" class="cbp-caption cbp-lightbox"
-                           data-title="publishing<br>by gsrthemes9">
+                           data-title="{{$gallery->title}}">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="images/gallery/tmb/{{$gallery->img_name}}" alt=""/>
                             </div>
